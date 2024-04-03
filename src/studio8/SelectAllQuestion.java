@@ -12,7 +12,7 @@ public class SelectAllQuestion extends MultipleChoiceQuestion {
 		//FIXME Should return partial credit (if earned)!
 		int x = findMissingCorrectAnswers(givenAnswer);
 		int y = findIncorrectGivenAnswers(givenAnswer);
-		return 4 - x - y;
+		return getPoints() - x - y;
 	}
 
 	private int findMissingCorrectAnswers(String givenAnswer) {
